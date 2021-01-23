@@ -11,54 +11,47 @@
 <body>
     <div class="container">
         <div class="textContainer">
-            <span>Password</span>
+            <h1>Password</h1>
         </div>
         <div class="inputContainer">
-            <button>Generate</button>
-            <input class="how-long" type="number">
+            <input class="how-long" type="range" min="1" max="50" value="20">
+            <span class="value">20</span>
+            <button>random</button>
         </div>
-
     </div>
     <script>
-        const h1 = document.querySelector('span');
+        const h1 = document.querySelector('h1');
         const psw = document.querySelector('button');
         const chars = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%^&*()-_=+/?><';
         const input = document.querySelector('.how-long');
+        const pswdlenght = document.querySelector('.value');
+        const btn = document.querySelector('button');
         let indexTyping ;
         let newPassword = '';
         let inputLength = 0;
-        charsNumber = 20 + 1;
+        charsNumber = 20;
         textNumber = 0;
-        input.addEventListener('input',(e)=>{
-            console.log(e.target.value);
+        const event = (e)=>{
             inputLength = e.target.value;
             inputLength = parseInt(inputLength);
-            charsNumber = 1 + inputLength;
-            if(inputLength === 0 ){
-                alert("hasło musi zawierać conajmniej 1znak")
-                e.target.value = 21;
-            }
-        })
-        psw.addEventListener("click",function(){
+            pswdlenght.textContent = e.target.value;
+            charsNumber = inputLength;
+            generatePassword();
+        }
+        input.addEventListener('input', event);
+       const generatePassword = ()=>{
             newPassword = '';
             h1.textContent = "";
             for(let i=0; i < charsNumber; i++){
                 let generate = Math.floor(Math.random()*chars.length);
                 newPassword += chars[generate];
             }  
-            execute();
-        })
-        const execute = (e)=>{
-            textNumber++;
-            h1.textContent+=newPassword[textNumber];
-            if(textNumber === newPassword.length -1){
-             textNumber = 0;
-             return;
-            }
-            h1
-           setTimeout(execute,10)
+            h1.textContent = newPassword;
         }
-
+        generatePassword();
+        btn.addEventListener('click',()=>{
+            generatePassword();
+        })
     </script>
 </body>
 </html>
