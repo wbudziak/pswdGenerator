@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="textContainer">
+            <span>Password</span>
+        </div>
+        <div class="inputContainer">
+            <button>Generate</button>
+            <input class="how-long" type="number">
+        </div>
+
+    </div>
+    <script>
+        const h1 = document.querySelector('span');
+        const psw = document.querySelector('button');
+        const chars = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%^&*()-_=+/?><';
+        const input = document.querySelector('.how-long');
+        let indexTyping ;
+        let newPassword = '';
+        let inputLength = 0;
+        charsNumber = 20 + 1;
+        textNumber = 0;
+        input.addEventListener('input',(e)=>{
+            console.log(e.target.value);
+            inputLength = e.target.value;
+            inputLength = parseInt(inputLength);
+            charsNumber = 1 + inputLength;
+            if(inputLength === 0 ){
+                alert("hasło musi zawierać conajmniej 1znak")
+                e.target.value = 21;
+            }
+        })
+        psw.addEventListener("click",function(){
+            newPassword = '';
+            h1.textContent = "";
+            for(let i=0; i < charsNumber; i++){
+                let generate = Math.floor(Math.random()*chars.length);
+                newPassword += chars[generate];
+            }  
+            execute();
+        })
+        const execute = (e)=>{
+            textNumber++;
+            h1.textContent+=newPassword[textNumber];
+            if(textNumber === newPassword.length -1){
+             textNumber = 0;
+             return;
+            }
+            h1
+           setTimeout(execute,10)
+        }
+
+    </script>
+</body>
+</html>
