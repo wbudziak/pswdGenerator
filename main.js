@@ -85,7 +85,11 @@
                 let generate = Math.floor(Math.random()* (chars.symbols.length + chars.lowerCase.length + chars.upperCase.length + chars.numbers.length
                 ));
                 newPassword += (chars.symbols + chars.lowerCase + chars.upperCase + chars.numbers)[generate];
+              
             }  
+            if(chars.symbols === "" && chars.lowerCase === "" && chars.upperCase === "" && chars.numbers === ""){
+                return;
+            }
             pswdInput.value = newPassword;
         }
         generatePassword();
