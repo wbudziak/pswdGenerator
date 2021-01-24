@@ -4,11 +4,11 @@
         numbers: "1234567890",
         symbols: "@#$%^&*()-_=+/?><",
         }
-                const pswdInput = document.querySelector('.pswdInput');
-
-        const input = document.querySelector('.how-long');
+        const pswdInput = document.querySelector('.pswdInput');
+        const progress = document.querySelector('.progress');
+        const input = document.querySelector('.slider');
         const pswdlenght = document.querySelector('.value');
-        const btn = document.querySelector('button');
+        const btn = document.querySelector('.refresh');
         const copy = document.querySelector('.copy');
 
         const radioLower = document.querySelector('.offLower');
@@ -24,6 +24,17 @@
             inputLength = e.target.value;
             inputLength = parseInt(inputLength);
             pswdlenght.textContent = e.target.value;
+           if(e.target.value >= 11){
+            progress.classList.add('green');
+            }
+            if(e.target.value <=10 ){
+                progress.classList.remove('green');
+                progress.classList.add('orange');
+            }
+            if(e.target.value <= 7){
+                progress.classList.remove('orange');
+                progress.classList.add('red');
+            }
             charsNumber = inputLength;
             generatePassword();
         }
@@ -86,5 +97,5 @@
             alert("copied");
         }
         copy.addEventListener('click', copyFunction)
-        pswdInput.addEventListener('click', copyFunction)
+        // pswdInput.addEventListener('click', copyFunction)
 

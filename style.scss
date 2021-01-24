@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #E8E8E8;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    .container{
+        max-width: 545px;
+        width: 100%;
+        // border: 1px solid black;
+        .textContainer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .input-text-container{
+                width: 480px;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+                .pswdInput{
+                    margin: 0;
+                    padding: 0;
+                    width: 440px;
+                    height: 50px;
+                    background-color: rgb(255, 255, 255);
+                    border: none;
+                    font-size: 20px;
+                    text-align: center;
+                    outline: none;
+                    font-family: 'Lato', sans-serif;
+                }
+                .progress{
+                    height: 3px;
+                    width: 100%;
+                    background-color: rgb(94, 228, 112);
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transition: .2s linear;
+                }
+                .red{
+                    background-color: rgb(250, 83, 83);
+                    width: 20%;
+                }
+                .orange{
+                    background-color: rgb(255, 173, 65);
+                    width: 50%;
+                }
+                .green{
+                    width: 100%;
+                    background-color: rgb(94, 228, 112);
+                }
+            }
+            .refresh-copy{
+                max-width: 65px;
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                .copy,.refresh{
+                    cursor: pointer;
+                    width: 23px;
+                    height: 23px;
+                    border-radius: 5px;
+                    background-color: #C4C4C4;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 16px;
+                    color: white;
+                }
+            }
+        }
+        .slider-counter-container{
+            margin-top: 15px;
+            // border: 1px solid black;
+            display: flex;
+            .slider-container{
+                max-width: 480px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .slider {
+                    -webkit-appearance: none;  
+                    appearance: none;
+                    max-width: 440px; 
+                    width: 100%;
+                    height: 9px; 
+                    background: #d3d3d3; 
+                    outline: none; 
+                    border-radius: 25px;
+                    opacity: 0.9; 
+                    -webkit-transition: .2s; 
+                    transition: opacity .2s;
+                    &:hover {
+                        opacity: 1;
+                      }
+                    &::-webkit-slider-thumb {
+                        -webkit-appearance: none; 
+                        appearance: none;
+                        width: 25px; 
+                        height: 25px; 
+                        border-radius: 50px;
+                        background: #ffffff; 
+                        cursor: pointer; 
+                        position: relative;
+                      }
+                    &::-moz-range-thumb {
+                        width: 30px; 
+                        height: 30px;
+                        background: #4CAF50;
+                        cursor: pointer;
+                      }
+                  }
+            }
+            .counter-container{
+                max-width: 65px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+        }
+        .checkboxes{
+            margin-top: 15px;
+            width: 100%;
+            // background-color: orange;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+    }
+}

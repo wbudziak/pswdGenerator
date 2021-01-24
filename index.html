@@ -6,31 +6,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <title>Document</title>
-    <style>
-        .pswdInput{
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <div class="textContainer">
-            <!-- <h1>Password</h1> -->
-            <input class="pswdInput" type="text" value="password">
+            <div class="input-text-container">
+                <span class="progress"></span>
+                <input class="pswdInput" type="text" value="password">
+            </div>
+            <div class="refresh-copy">
+                <div class="refresh"><i class="fas fa-sync-alt"></i></div>
+                <div class="copy"><i class="far fa-copy"></i></div>
+            </div>
         </div>
-        <div class="inputContainer">
-            <input class="how-long" type="range" min="1" max="50" value="20">
-            <span class="value">20</span>
-            <button>random</button>
-            <button class="copy">copy</button>
-
+        <div class="slider-counter-container">
+            <div class="slider-container">
+                <input class="slider" type="range" min="1" max="50" value="20">
+            </div>
+            <div class="counter-container">
+                <span class="value">20</span>
+            </div>
+        </div>
+        <div class="checkboxes">
+            <div class="box">     
+            <span>Upper case</span>
+            <input class="offUpper" type="checkbox" checked>
+            </div>
+            <div class="box">     
+                <span>Lower case</span>
+                <input class="offLower" type="checkbox" checked>
+            </div>
+            <div class="box">     
+                <span>Symbols</span>
+                <input class="offSymbols" type="checkbox" checked>
+            </div>
+            <div class="box">     
+                <span>Numbers</span>
+                <input class="offNumbers" type="checkbox" checked>
+            </div>
+            
         </div>
     </div>
-    <input class="offUpper" type="checkbox">
-    <input class="offLower" type="checkbox">
-    <input class="offSymbols" type="checkbox">
-    <input class="offNumbers" type="checkbox">
+
 
 
     <script src="main.js"></script>
