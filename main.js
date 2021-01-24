@@ -10,17 +10,17 @@
         const pswdlenght = document.querySelector('.value');
         const refresh = document.querySelector('.refresh');
         const copy = document.querySelector('.copy');
-        const icon = document.querySelector('i');
-        const radioLower = document.querySelector('.offLower');
-        const radioUpper = document.querySelector('.offUpper');
-        const radioSymbols = document.querySelector('.offSymbols');
-        const radioNumbers = document.querySelector('.offNumbers');
+        const icon = document.querySelector('.fas');
+        const checkLower = document.querySelector('.offLower');
+        const checkUpper = document.querySelector('.offUpper');
+        const checkSymbols = document.querySelector('.offSymbols');
+        const checkNumbers = document.querySelector('.offNumbers');
 
         let newPassword = '';
         let inputLength = 0;
-        charsNumber = 20;
+        charsNumber = 11;
         let rotateDeg = 0;
-        
+
         const event = (e)=>{
             console.log(e.target.value);
             inputLength = e.target.value;
@@ -41,8 +41,8 @@
             generatePassword();
         }
         input.addEventListener('input', event);
-        radioLower.addEventListener('click', ()=>{
-            if(radioLower.checked == false){
+        checkLower.addEventListener('click', ()=>{
+            if(checkLower.checked == false){
                 chars.lowerCase = '';
                 generatePassword();
             }else{
@@ -50,8 +50,8 @@
                 generatePassword();
             }
         })
-        radioUpper.addEventListener('click', ()=>{
-            if(radioUpper.checked == false){
+        checkUpper.addEventListener('click', ()=>{
+            if(checkUpper.checked == false){
                 chars.upperCase = '';
                 generatePassword();
             }else{
@@ -59,8 +59,8 @@
                 generatePassword();
             }
         })
-        radioSymbols.addEventListener('click', ()=>{
-            if(radioSymbols.checked == false){
+        checkSymbols.addEventListener('click', ()=>{
+            if(checkSymbols.checked == false){
                 chars.symbols = '';
                 generatePassword();
             }else{
@@ -68,8 +68,8 @@
                 generatePassword();
             }
         })
-        radioNumbers.addEventListener('click', ()=>{
-            if(radioNumbers.checked == false){
+        checkNumbers.addEventListener('click', ()=>{
+            if(checkNumbers.checked == false){
                 chars.numbers = '';
                 generatePassword();
             }else{
@@ -77,6 +77,7 @@
                 generatePassword();
             }
         })
+       
         const generatePassword = ()=>{
             newPassword = '';
             pswdInput.value = "";
