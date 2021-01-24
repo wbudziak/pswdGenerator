@@ -7,107 +7,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <style>
+        .pswdInput{
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="textContainer">
-            <h1>Password</h1>
+            <!-- <h1>Password</h1> -->
+            <input class="pswdInput" type="text" value="password">
         </div>
         <div class="inputContainer">
             <input class="how-long" type="range" min="1" max="50" value="20">
             <span class="value">20</span>
             <button>random</button>
+            <button class="copy">copy</button>
+
         </div>
     </div>
     <input class="offUpper" type="checkbox">
     <input class="offLower" type="checkbox">
     <input class="offSymbols" type="checkbox">
     <input class="offNumbers" type="checkbox">
-    <script>
-        const h1 = document.querySelector('h1');
-        const psw = document.querySelector('button');
-        let chars = {
-        lowerCase: "qwertyuiopasdfghjklzxcvbnm",
-        upperCase: "QWERTYUIOPASDFGHJKLZXCVBNM",
-        numbers: "1234567890",
-        symbols: "@#$%^&*()-_=+/?><",
-        }
-        const input = document.querySelector('.how-long');
-        const pswdlenght = document.querySelector('.value');
-        const btn = document.querySelector('button');
-
-        const radioLower = document.querySelector('.offLower');
-        const radioUpper = document.querySelector('.offUpper');
-        const radioSymbols = document.querySelector('.offSymbols');
-        const radioNumbers = document.querySelector('.offNumbers');
-
-        let newPassword = '';
-        let inputLength = 0;
-        charsNumber = 20;
-        const event = (e)=>{
-            console.log(e.target.value);
-            inputLength = e.target.value;
-            inputLength = parseInt(inputLength);
-            pswdlenght.textContent = e.target.value;
-            charsNumber = inputLength;
-            generatePassword();
-        }
-        input.addEventListener('input', event);
 
 
-        radioLower.addEventListener('click', ()=>{
-            if(radioLower.checked == true){
-                chars.lowerCase = '';
-                generatePassword();
-            }else{
-                chars.lowerCase = 'qwertyuiopasdfghjklzxcvbnm';
-                generatePassword();
-            }
-        })
-        radioUpper.addEventListener('click', ()=>{
-            if(radioUpper.checked == true){
-                chars.upperCase = '';
-                generatePassword();
-            }else{
-                chars.upperCase = 'QWERTYUIOPASDFGHJKLZXCVBNM';
-                generatePassword();
-            }
-        })
-        radioSymbols.addEventListener('click', ()=>{
-            if(radioSymbols.checked == true){
-                chars.symbols = '';
-                generatePassword();
-            }else{
-                chars.symbols = '@#$%^&*()-_=+/?><';
-                generatePassword();
-            }
-        })
-        radioNumbers.addEventListener('click', ()=>{
-            if(radioNumbers.checked == true){
-                chars.numbers = '';
-                generatePassword();
-            }else{
-                chars.numbers = '1234567890';
-                generatePassword();
-            }
-        })
-
-
-
-       const generatePassword = ()=>{
-            newPassword = '';
-            h1.textContent = "";
-            for(let i=0; i < charsNumber; i++){
-                let generate = Math.floor(Math.random()* (chars.symbols.length + chars.lowerCase.length + chars.upperCase.length + chars.numbers.length
-                ));
-                newPassword += (chars.symbols + chars.lowerCase + chars.upperCase + chars.numbers)[generate];
-            }  
-            h1.textContent = newPassword;
-        }
-        generatePassword();
-        btn.addEventListener('click',()=>{
-            generatePassword();
-        })
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
