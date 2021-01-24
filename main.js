@@ -8,9 +8,9 @@
         const progress = document.querySelector('.progress');
         const input = document.querySelector('.slider');
         const pswdlenght = document.querySelector('.value');
-        const btn = document.querySelector('.refresh');
+        const refresh = document.querySelector('.refresh');
         const copy = document.querySelector('.copy');
-
+        const icon = document.querySelector('i');
         const radioLower = document.querySelector('.offLower');
         const radioUpper = document.querySelector('.offUpper');
         const radioSymbols = document.querySelector('.offSymbols');
@@ -19,12 +19,14 @@
         let newPassword = '';
         let inputLength = 0;
         charsNumber = 20;
+        let rotateDeg = 0;
+        
         const event = (e)=>{
             console.log(e.target.value);
             inputLength = e.target.value;
             inputLength = parseInt(inputLength);
-            pswdlenght.textContent = e.target.value;
-           if(e.target.value >= 11){
+            pswdlenght.textContent = `lenght ${e.target.value}`;
+            if(e.target.value >= 11){
             progress.classList.add('green');
             }
             if(e.target.value <=10 ){
@@ -40,7 +42,7 @@
         }
         input.addEventListener('input', event);
         radioLower.addEventListener('click', ()=>{
-            if(radioLower.checked == true){
+            if(radioLower.checked == false){
                 chars.lowerCase = '';
                 generatePassword();
             }else{
@@ -49,7 +51,7 @@
             }
         })
         radioUpper.addEventListener('click', ()=>{
-            if(radioUpper.checked == true){
+            if(radioUpper.checked == false){
                 chars.upperCase = '';
                 generatePassword();
             }else{
@@ -58,7 +60,7 @@
             }
         })
         radioSymbols.addEventListener('click', ()=>{
-            if(radioSymbols.checked == true){
+            if(radioSymbols.checked == false){
                 chars.symbols = '';
                 generatePassword();
             }else{
@@ -67,7 +69,7 @@
             }
         })
         radioNumbers.addEventListener('click', ()=>{
-            if(radioNumbers.checked == true){
+            if(radioNumbers.checked == false){
                 chars.numbers = '';
                 generatePassword();
             }else{
@@ -75,8 +77,7 @@
                 generatePassword();
             }
         })
-
-       const generatePassword = ()=>{
+        const generatePassword = ()=>{
             newPassword = '';
             pswdInput.value = "";
             for(let i=0; i < charsNumber; i++){
@@ -87,7 +88,9 @@
             pswdInput.value = newPassword;
         }
         generatePassword();
-        btn.addEventListener('click',()=>{
+        refresh.addEventListener('click',()=>{
+            rotateDeg += 360;
+            icon.style.transform = `rotate(${rotateDeg}deg)`;
             generatePassword();
         })
         const copyFunction = ()=>{
@@ -97,5 +100,4 @@
             alert("copied");
         }
         copy.addEventListener('click', copyFunction)
-        // pswdInput.addEventListener('click', copyFunction)
 

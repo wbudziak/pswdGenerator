@@ -12,9 +12,12 @@ body{
     justify-content: center;
     font-family: 'Lato', sans-serif;
     .container{
+        height: 125px;
         max-width: 545px;
         width: 100%;
-        // border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         .textContainer{
             display: flex;
             align-items: center;
@@ -44,7 +47,7 @@ body{
                 .progress{
                     height: 3px;
                     width: 100%;
-                    background-color: rgb(94, 228, 112);
+                    background-color: rgb(112, 207, 120);
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -60,7 +63,7 @@ body{
                 }
                 .green{
                     width: 100%;
-                    background-color: rgb(94, 228, 112);
+                    background-color: rgb(112, 207, 120);
                 }
             }
             .refresh-copy{
@@ -79,13 +82,16 @@ body{
                     justify-content: center;
                     font-size: 16px;
                     color: white;
+                    i{
+                        transition: .2s linear;
+                    }
                 }
             }
         }
         .slider-counter-container{
-            margin-top: 15px;
-            // border: 1px solid black;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
             .slider-container{
                 max-width: 480px;
                 width: 100%;
@@ -132,16 +138,19 @@ body{
                 align-items: center;
                 justify-content: center;
             }
-            
         }
         .checkboxes{
-            margin-top: 15px;
             width: 100%;
-            // background-color: orange;
             display: flex;
             align-items: center;
             justify-content: space-between;
+             .box{
+                 max-width: 50px;
+                 width: 100%;
+                 display: flex;
+                 align-items: center;
+                 justify-content: space-between;
+             }
         }
-
     }
 }
