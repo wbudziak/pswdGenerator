@@ -232,7 +232,7 @@ body .container .checkboxes {
 }
 
 body .container .checkboxes .box {
-  max-width: 50px;
+  max-width: 60px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,5 +243,31 @@ body .container .checkboxes .box {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+body .container .checkboxes .box .checkbox-custom {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #70cf78;
+  font-size: 13px;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+body .container .checkboxes .box .unChecked {
+  color: transparent;
+  font-size: 0;
 }
 /*# sourceMappingURL=style.css.map */
