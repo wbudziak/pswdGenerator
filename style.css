@@ -261,7 +261,7 @@ body .container .checkboxes .box .checkbox-custom {
       -ms-flex-pack: center;
           justify-content: center;
   color: #70cf78;
-  font-size: 13px;
+  font-size: 11px;
   -webkit-transition: .1s linear;
   transition: .1s linear;
 }
