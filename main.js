@@ -72,7 +72,7 @@
             if(lowerCheck){
                 lowerCheck = !lowerCheck;
                 checkLower.classList.remove('unChecked');
-                chars.upperCase = 'qwertyuiopasdfghjklzxcvbnm';
+                chars.lowerCase = 'qwertyuiopasdfghjklzxcvbnm';
                 generatePassword();
             }else{
                 lowerCheck = !lowerCheck;
