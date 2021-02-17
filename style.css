@@ -21,7 +21,7 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-body .container {
+.container {
   height: 125px;
   max-width: 545px;
   width: 100%;
@@ -37,7 +37,7 @@ body .container {
           justify-content: space-between;
 }
 
-body .container .textContainer {
+.textContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,7 +49,7 @@ body .container .textContainer {
           justify-content: space-between;
 }
 
-body .container .textContainer .input-text-container {
+.textContainer .input-text-container {
   width: 480px;
   height: 50px;
   background-color: white;
@@ -67,7 +67,7 @@ body .container .textContainer .input-text-container {
   overflow: hidden;
 }
 
-body .container .textContainer .input-text-container .pswdInput {
+.textContainer .input-text-container .pswdInput {
   margin: 0;
   padding: 0;
   width: 440px;
@@ -80,7 +80,7 @@ body .container .textContainer .input-text-container .pswdInput {
   font-family: 'Lato', sans-serif;
 }
 
-body .container .textContainer .input-text-container .progress {
+.textContainer .input-text-container .progress {
   height: 3px;
   width: 100%;
   background-color: #70cf78;
@@ -91,22 +91,22 @@ body .container .textContainer .input-text-container .progress {
   transition: .2s linear;
 }
 
-body .container .textContainer .input-text-container .red {
+.textContainer .input-text-container .red {
   background-color: #fa5353;
   width: 20%;
 }
 
-body .container .textContainer .input-text-container .orange {
+.textContainer .input-text-container .orange {
   background-color: #ffad41;
   width: 50%;
 }
 
-body .container .textContainer .input-text-container .green {
+.textContainer .input-text-container .green {
   width: 100%;
   background-color: #70cf78;
 }
 
-body .container .textContainer .refresh-copy {
+.textContainer .refresh-copy {
   max-width: 65px;
   width: 100%;
   display: -webkit-box;
@@ -117,7 +117,8 @@ body .container .textContainer .refresh-copy {
           justify-content: space-evenly;
 }
 
-body .container .textContainer .refresh-copy .copy, body .container .textContainer .refresh-copy .refresh {
+.textContainer .refresh-copy .copy,
+.textContainer .refresh-copy .refresh {
   cursor: pointer;
   width: 26px;
   height: 26px;
@@ -136,12 +137,13 @@ body .container .textContainer .refresh-copy .copy, body .container .textContain
   color: #c4c4c4;
 }
 
-body .container .textContainer .refresh-copy .copy i, body .container .textContainer .refresh-copy .refresh i {
+.textContainer .refresh-copy .copy i,
+.textContainer .refresh-copy .refresh i {
   -webkit-transition: .2s linear;
   transition: .2s linear;
 }
 
-body .container .slider-counter-container {
+.slider-counter-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,7 +155,7 @@ body .container .slider-counter-container {
           align-items: center;
 }
 
-body .container .slider-counter-container .slider-container {
+.slider-counter-container .slider-container {
   max-width: 480px;
   width: 100%;
   display: -webkit-box;
@@ -167,7 +169,7 @@ body .container .slider-counter-container .slider-container {
           justify-content: center;
 }
 
-body .container .slider-counter-container .slider-container .slider {
+.slider-counter-container .slider-container .slider {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -182,11 +184,11 @@ body .container .slider-counter-container .slider-container .slider {
   transition: opacity .2s;
 }
 
-body .container .slider-counter-container .slider-container .slider:hover {
+.slider-counter-container .slider-container .slider:hover {
   opacity: 1;
 }
 
-body .container .slider-counter-container .slider-container .slider::-webkit-slider-thumb {
+.slider-counter-container .slider-container .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 25px;
@@ -197,14 +199,14 @@ body .container .slider-counter-container .slider-container .slider::-webkit-sli
   position: relative;
 }
 
-body .container .slider-counter-container .slider-container .slider::-moz-range-thumb {
+.slider-counter-container .slider-container .slider::-moz-range-thumb {
   width: 30px;
   height: 30px;
   background: #4CAF50;
   cursor: pointer;
 }
 
-body .container .slider-counter-container .counter-container {
+.slider-counter-container .counter-container {
   max-width: 65px;
   width: 100%;
   display: -webkit-box;
@@ -218,7 +220,7 @@ body .container .slider-counter-container .counter-container {
           justify-content: center;
 }
 
-body .container .checkboxes {
+.checkboxes {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,7 +233,7 @@ body .container .checkboxes {
           justify-content: space-between;
 }
 
-body .container .checkboxes .box {
+.checkboxes .box {
   max-width: 60px;
   width: 100%;
   display: -webkit-box;
@@ -245,7 +247,7 @@ body .container .checkboxes .box {
           justify-content: space-between;
 }
 
-body .container .checkboxes .box .checkbox-custom {
+.checkboxes .box .checkbox-custom {
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -266,7 +268,7 @@ body .container .checkboxes .box .checkbox-custom {
   transition: .1s linear;
 }
 
-body .container .checkboxes .box .unChecked {
+.checkboxes .box .unChecked {
   color: transparent;
   font-size: 0;
 }

@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #E8E8E8;
     width: 100%;
     height: 100vh;
@@ -11,162 +12,185 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'Lato', sans-serif;
-    .container{
-        height: 125px;
-        max-width: 545px;
+}
+
+.container {
+    height: 125px;
+    max-width: 545px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.textContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .input-text-container {
+        width: 480px;
+        height: 50px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+
+        .pswdInput {
+            margin: 0;
+            padding: 0;
+            width: 440px;
+            height: 50px;
+            background-color: rgb(255, 255, 255);
+            border: none;
+            font-size: 20px;
+            text-align: center;
+            outline: none;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .progress {
+            height: 3px;
+            width: 100%;
+            background-color: rgb(112, 207, 120);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: .2s linear;
+        }
+
+        .red {
+            background-color: rgb(250, 83, 83);
+            width: 20%;
+        }
+
+        .orange {
+            background-color: rgb(255, 173, 65);
+            width: 50%;
+        }
+
+        .green {
+            width: 100%;
+            background-color: rgb(112, 207, 120);
+        }
+    }
+
+    .refresh-copy {
+        max-width: 65px;
         width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .textContainer{
+        justify-content: space-evenly;
+
+        .copy,
+        .refresh {
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+            border-radius: 5px;
+            background-color: white;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            .input-text-container{
-                width: 480px;
-                height: 50px;
-                background-color: rgb(255, 255, 255);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 5px;
-                position: relative;
-                overflow: hidden;
-                .pswdInput{
-                    margin: 0;
-                    padding: 0;
-                    width: 440px;
-                    height: 50px;
-                    background-color: rgb(255, 255, 255);
-                    border: none;
-                    font-size: 20px;
-                    text-align: center;
-                    outline: none;
-                    font-family: 'Lato', sans-serif;
-                }
-                .progress{
-                    height: 3px;
-                    width: 100%;
-                    background-color: rgb(112, 207, 120);
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    transition: .2s linear;
-                }
-                .red{
-                    background-color: rgb(250, 83, 83);
-                    width: 20%;
-                }
-                .orange{
-                    background-color: rgb(255, 173, 65);
-                    width: 50%;
-                }
-                .green{
-                    width: 100%;
-                    background-color: rgb(112, 207, 120);
-                }
-            }
-            .refresh-copy{
-                max-width: 65px;
-                width: 100%;
-                display: flex;
-                justify-content: space-evenly;
-                .copy,.refresh{
-                    cursor: pointer;
-                    width: 26px;
-                    height: 26px;
-                    border-radius: 5px;
-                    background-color: white;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 16px;
-                    color: #c4c4c4;
-                    i{
-                        transition: .2s linear;
-                    }
-                }
+            justify-content: center;
+            font-size: 16px;
+            color: #c4c4c4;
+
+            i {
+                transition: .2s linear;
             }
         }
-        .slider-counter-container{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .slider-container{
-                max-width: 480px;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                .slider {
-                    -webkit-appearance: none;  
-                    appearance: none;
-                    max-width: 440px; 
-                    width: 100%;
-                    height: 5px; 
-                    background: #c4c4c4; 
-                    outline: none; 
-                    border-radius: 50px;
-                    -webkit-transition: .2s; 
-                    transition: opacity .2s;
-                    &:hover {
-                        opacity: 1;
-                      }
-                    &::-webkit-slider-thumb {
-                        -webkit-appearance: none; 
-                        appearance: none;
-                        width: 25px; 
-                        height: 25px; 
-                        border-radius: 50px;
-                        background: #ffffff; 
-                        cursor: pointer; 
-                        position: relative;
-                      }
-                    &::-moz-range-thumb {
-                        width: 30px; 
-                        height: 30px;
-                        background: #4CAF50;
-                        cursor: pointer;
-                      }
-                  }
-            }
-            .counter-container{
-                max-width: 65px;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
-        .checkboxes{
+    }
+}
+
+.slider-counter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .slider-container {
+        max-width: 480px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            max-width: 440px;
             width: 100%;
+            height: 5px;
+            background: #c4c4c4;
+            outline: none;
+            border-radius: 50px;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px;
+                height: 25px;
+                border-radius: 50px;
+                background: #ffffff;
+                cursor: pointer;
+                position: relative;
+            }
+
+            &::-moz-range-thumb {
+                width: 30px;
+                height: 30px;
+                background: #4CAF50;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .counter-container {
+        max-width: 65px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.checkboxes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .box {
+        max-width: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .checkbox-custom {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 5px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-             .box{
-                 max-width: 60px;
-                 width: 100%;
-                 display: flex;
-                 align-items: center;
-                 justify-content: space-between;
-                 .checkbox-custom{
-                     cursor: pointer;
-                     width: 20px;
-                     height: 20px;
-                     background-color: #fff;
-                     border-radius: 5px;
-                     display: flex;
-                     align-items: center;
-                     justify-content: center;
-                     color: rgb(112, 207, 120);
-                     font-size: 11px;
-                     transition: .1s linear;
-                 }
-                 .unChecked{
-                     color: transparent;
-                     font-size: 0;
-                 }
-             }
+            justify-content: center;
+            color: rgb(112, 207, 120);
+            font-size: 11px;
+            transition: .1s linear;
+        }
+
+        .unChecked {
+            color: transparent;
+            font-size: 0;
         }
     }
 }
